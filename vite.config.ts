@@ -86,7 +86,7 @@ export default (config) => {
     },
     plugins: [
       react(),
-      // ViteRequireContext.default(),
+      (ViteRequireContext as any).default(),
       requireTransform({}),
       viteCompression(),
       UnoCSS(),
@@ -97,13 +97,6 @@ export default (config) => {
         dts: 'src/auto-import.d.ts', // 生成 auto-import.d.ts 全局声明
         dirs: ['./preFunc/**'],
       }),
-
-      // Components({
-      //   // allow auto load markdown components under `./src/components/`
-      //   // extensions: ['tsx', 'md'], // allow auto import and register components used in markdown
-      //   include: [/\.[tj]sx?$/, /\.md$/],
-      //   dts: true,
-      // }),
 
       // 图片压缩
       ViteImageOptimizer({
@@ -168,14 +161,14 @@ export default (config) => {
       rollupOptions: {
         // 确保外部化处理那些你不想打包进库的依赖
         external: ['parallax-js'],
-        plugins: [inject({ Buffer: ['buffer', 'Buffer'] })],
+        // plugins: [inject({ Buffer: ['buffer', 'Buffer'] })],
       },
       outDir: './dist',
     },
 
     esbuild: {
       pure: ['console.log'],
-      minify: true,
+      // minify: true,
     },
 
     server: {
