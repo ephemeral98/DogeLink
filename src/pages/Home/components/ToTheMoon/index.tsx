@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { styled } from 'styled-components';
 import VideoComp from '@/components/VideoComp';
+import { $fontSize, $height, $width } from '@/styled/mediaSize';
 
 interface IToTheMoon {
   className?: string;
@@ -10,20 +11,22 @@ const ToTheMoonWrap = styled.div`
   /* background-color: #fed100; */
   background-color: #fcd84f;
   position: relative;
+  width: 100%;
+  overflow-x: hidden;
 
   .elon-video {
-    height: 509rem;
+    ${$height('240rem', '509rem', '509rem')}
   }
 
   .img-moon {
-    width: 478rem;
+    ${$width('270rem', '478rem', '478rem')}
     position: absolute;
     right: 0;
     top: -40rem;
   }
 
   .to-the-moon-text {
-    font-size: 213rem;
+    ${$fontSize('50rem', '213rem', '213rem')}
     position: absolute;
     top: 150rem;
     left: 50%;
@@ -34,7 +37,7 @@ const ToTheMoonWrap = styled.div`
   }
 
   .doge-plane {
-    width: 610rem;
+    ${$width('270rem', '610rem', '610rem')}
     position: absolute;
     left: 50%;
     bottom: 0;

@@ -1,10 +1,10 @@
+import { $height } from '@/styled/mediaSize';
 import { flexPos } from '@/styled/mixin';
 import { FC, ReactNode } from 'react';
 import { styled } from 'styled-components';
 
 const MarqueeWrap = styled.div`
   background-color: #000;
-  height: 53rem;
   white-space: nowrap;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@ const MarqueeWrap = styled.div`
   font-size: 21rem;
   font-weight: bold;
   overflow: auto;
+  ${$height('45rem', '53rem', '53rem')}
 
   @keyframes marquee {
     0% {

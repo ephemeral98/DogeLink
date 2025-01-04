@@ -11,6 +11,7 @@ export default defineConfig({
     breakpoints: {
       sm: '375px',
       md: '750px',
+      phone: '393px',
       lg: '1024px',
       xl: '1280px',
       pc: '1440px',

@@ -1,9 +1,10 @@
+import { $fontSize, $height } from '@/styled/mediaSize';
 import React, { FC, ReactNode } from 'react';
 import { styled } from 'styled-components';
 
 const HomeTitleWrap = styled.div`
   font-weight: 700;
-  font-size: 64rem;
+  ${$fontSize('28rem', '64rem', '64rem')}
   width: fit-content;
   margin: 0 auto;
   position: relative;
@@ -15,7 +16,7 @@ const HomeTitleWrap = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 33rem;
+    ${$height('12rem', '33rem', '33re')}
     background-color: #ffeaa0;
   }
 

@@ -63,6 +63,7 @@ export const useUpdateRef = <T>(val: T): [MutableRefObject<T>, DispatchWithoutAc
 export const useCopy = () => {
   useEffect(() => {
     const cpyer = new clipboard('.copy-btn');
+    console.log('...copy-btn');
 
     cpyer.on('success', (e: any) => {
       Message.success('Copy successful');

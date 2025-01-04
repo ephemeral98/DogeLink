@@ -3,14 +3,38 @@ import React from 'react';
 import { styled } from 'styled-components';
 import Button from '@/components/Buttons';
 import Marquee from '@/components/Marquee';
+import { $bottom, $height, $paddingX, $width } from '@/styled/mediaSize';
 
 const BannerWrap = styled.div`
   .banner-container {
     padding: 81rem 100rem 0;
     position: relative;
+    ${$paddingX('30rem', '100rem', '100rem')}
 
     .banner-main {
+      ${$width('100%', '80%', '80%')}
       ${flexPos('space-between')}
+      margin: 0 auto;
+    }
+
+    .doge-wrap {
+      .doge-1 {
+        display: block;
+      }
+
+      .doge-2 {
+        display: none;
+      }
+
+      &:hover {
+        .doge-1 {
+          display: none;
+        }
+
+        .doge-2 {
+          display: block;
+        }
+      }
     }
 
     .social-media {
@@ -24,11 +48,12 @@ const BannerWrap = styled.div`
     .buy-now {
       position: absolute;
       left: 50%;
-      bottom: 100rem;
       transform: translate(-50%, 0);
-      height: 50rem;
-      padding: 0 65rem;
+      padding: 0 60rem;
       z-index: 99;
+      ${$height('46rem', '50rem', '50rem')}
+      ${$bottom('-70rem', '-130rem', '-130rem')}
+      white-space: nowrap;
     }
   }
 `;
@@ -51,23 +76,30 @@ const Banner = () => {
             <div>S</div>
           </div>
 
-          <img src={'/logo-doge.png'} alt="" className="w-558 h-558" />
+          <div className="doge-wrap w-250 h-250 md:w-558 md:h-558">
+            <img src={'/logo-doge.png'} alt="" className="doge-1 w-250 h-250 md:w-558 md:h-558" />
+            <img
+              src={require('@img/common/doge-down.png')}
+              alt=""
+              className="doge-2 w-250 h-250 md:w-558 md:h-558"
+            />
+          </div>
 
           <div className="social-media">
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-26" />
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-26" />
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-26" />
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-26" />
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-26" />
+            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-20 md:w-26" />
+            <img src={require('@img/common/icon-x.svg')} alt="" className="w-20 md:w-26" />
+            <img src={require('@img/common/icon-tg.svg')} alt="" className="w-20 md:w-26" />
+            <img src={require('@img/common/icon-tiktok.svg')} alt="" className="w-20 md:w-26" />
+            <img src={require('@img/common/icon-ins.svg')} alt="" className="w-20 md:w-26" />
           </div>
         </main>
 
-        <div className="Poppins text-#ffffffce font-700 text-132 text-center leading-[0.8]">
-          <div>Savior of the</div>
-          <div>Persecuted Puppy</div>
-        </div>
-
         <Button className="buy-now">BUY NOW</Button>
+      </div>
+
+      <div className="Poppins text-#ffffffce font-700 text-42 md:text-132 text-center leading-[1] md:leading-[0.8] whitespace-nowrap">
+        <div>Savior of the</div>
+        <div>Persecuted Puppy</div>
       </div>
 
       <Marquee>

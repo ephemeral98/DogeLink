@@ -9,12 +9,9 @@ interface IAppStore {
 }
 
 const useAppStore = create<IAppStore>((set, get) => ({
-  curDevice: 'pad', // 当前设备
+  curDevice: 'phone', // 当前设备
   setCurDevice: () =>
     set(() => {
-      if (!isClient()) {
-        return { curDevice: 'pc' };
-      }
       const clientWidth = window.innerWidth;
       if (clientWidth <= 750) {
         return { curDevice: 'phone' };

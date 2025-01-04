@@ -1,3 +1,7 @@
 .arco-message-wrapper {
   z-index: 999999;
 }
+
+.copy-btn {
+  cursor: pointer;
+}

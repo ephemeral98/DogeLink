@@ -6,10 +6,19 @@ import initRem from './utils/initRem';
 import Topbar from '@cps/Topbar';
 import { useCopy } from '@/gHooks/index';
 import Footer from './components/Footer';
+import useAppStore from './store/appStore';
+import { bpThrottle } from './gHooks/useDeb';
 
 function App() {
+  const appStore = useAppStore();
+
   useEffect(() => {
     initRem();
+
+    appStore.setCurDevice();
+    window.onresize = bpThrottle(() => {
+      appStore.setCurDevice();
+    });
   }, []);
 
   useCopy();

@@ -1,15 +1,16 @@
+import { $bottom, $right } from '@/styled/mediaSize';
 import { flexPos } from '@/styled/mixin';
 import React from 'react';
 import { styled } from 'styled-components';
 
 const ToTopWrap = styled.div`
   position: fixed;
-  right: 100rem;
-  bottom: 84rem;
   cursor: pointer;
   z-index: 999;
 
   ${flexPos('center')}
+  ${$right('30rem', '100rem', '100rem')}
+  ${$bottom('30rem', '84rem', '84rem')}
 
   .icon-arrow-bar {
     width: 22rem;
