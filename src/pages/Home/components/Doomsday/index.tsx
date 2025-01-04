@@ -42,7 +42,7 @@ const Doomsday = () => {
           <div className="mb-12 text-28 md:text-32 font-700 text-center md:text-left">
             Frank Doomsday
           </div>
-          <div className="px-30 md:px-0">
+          <div className="px-30 md:px-0 Poppins-LightItalic">
             “Savior of the Persecuted Puppy, Supreme Adorable Overlord of the Woof Realm,
             Butt-Sniffing Enthusiast, Conqueror of Alternate Realms, Bone-Crushing Battle Commander,
             Sofa Cushion Destroyer, Lamenting Table Leg Artist, Ascendant Leader of the Canine

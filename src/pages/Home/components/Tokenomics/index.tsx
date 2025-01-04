@@ -42,6 +42,14 @@ const TokenomicsWrap = styled.div`
     bottom: 0;
     z-index: 9;
   }
+
+  .buy-now {
+    transition: all 0.5s;
+
+    &:hover {
+      transform: rotateZ(-5deg) scale(1.1);
+    }
+  }
 `;
 
 const Tokenomics = () => {
@@ -76,9 +84,11 @@ const Tokenomics = () => {
 
       <main className="flex-center mt-70 flex-col md:flex-row">
         <section className="token-supply mr-0 md:mr-26">
-          <div className="text-18 md:text-24 font-500 text-center">Token Supply</div>
-          <div className="mt-2 text-24 md:text-36 font-500 text-center">100,000,000,000,000</div>
-          <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins">
+          <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
+          <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">
+            100,000,000,000,000
+          </div>
+          <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-bold buy-now">
             BUY NOW
           </button>
 
@@ -89,7 +99,7 @@ const Tokenomics = () => {
         </section>
 
         <section className="mt-26 md:mt-0">
-          <div className="text-center md:text-left text-18 md:text-21 font-600 Poppins">
+          <div className="text-center md:text-left text-18 md:text-21 font-600 Poppins-Bold">
             <div>As friends, you awesome humans</div>
             <div>need to grab my tokens.</div>
           </div>
@@ -106,11 +116,7 @@ const Tokenomics = () => {
 
           <a className="view-into-solana">
             <span className="underline">VIEW IN SOLANA</span>
-            <img
-              src={require('@img/common/icon-arrow-bar.svg')}
-              alt=""
-              className="w-22 ml-10"
-            />
+            <img src={require('@img/common/icon-arrow-bar.svg')} alt="" className="w-22 ml-10" />
           </a>
         </section>
       </main>

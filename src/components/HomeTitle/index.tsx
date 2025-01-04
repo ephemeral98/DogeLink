@@ -16,7 +16,7 @@ const HomeTitleWrap = styled.div`
     left: 0;
     bottom: 0;
     width: 100%;
-    ${$height('12rem', '33rem', '33re')}
+    ${$height('12rem', '33rem', '33rem')}
     background-color: #ffeaa0;
   }
 
@@ -28,8 +28,8 @@ const HomeTitleWrap = styled.div`
 
 const HomeTitle: FC<{ children: ReactNode }> = (props) => {
   return (
-    <HomeTitleWrap className="Poppins">
-      <div className="title-content">{props.children}</div>
+    <HomeTitleWrap>
+      <div className="title-content Poppins-ExtraBold">{props.children}</div>
     </HomeTitleWrap>
   );
 };

@@ -58,7 +58,7 @@ const ToTheMoon: FC<IToTheMoon> = (props) => {
     <ToTheMoonWrap>
       <img src={require('@img/home/img-moon.png')} alt="" className="img-moon" />
 
-      <div className="to-the-moon-text">TO THE MOON</div>
+      <div className="to-the-moon-text Poppins-ExtraBold">TO THE MOON</div>
 
       <img src={require('@img/home/img-plane.png')} alt="" className="doge-plane" />
 

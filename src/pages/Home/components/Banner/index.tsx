@@ -50,6 +50,17 @@ const BannerWrap = styled.div`
     }
 
     .doge-wrap {
+      /* width: 250rem;
+      height: 250rem;
+      position: relative; */
+
+      .doge-1,
+      .doge-2 {
+        /* position: absolute;
+        left: 0;
+        top: 0; */
+      }
+
       .doge-1 {
         display: block;
       }
@@ -86,6 +97,11 @@ const BannerWrap = styled.div`
       ${$height('46rem', '50rem', '50rem')}
       ${$bottom('-70rem', '-130rem', '-130rem')}
       white-space: nowrap;
+      transition: all 0.5s;
+
+      &:hover {
+        transform: translate(-50%, 0) rotateZ(-5deg) scale(1.1);
+      }
     }
   }
 `;
@@ -139,10 +155,10 @@ const Banner = () => {
           </div>
         </main>
 
-        <Button className="buy-now">BUY NOW</Button>
+        <Button className="buy-now Poppins-Bold">BUY NOW</Button>
       </div>
 
-      <div className="Poppins text-#ffffffce font-700 text-42 md:text-132 text-center leading-[1] md:leading-[0.8] whitespace-nowrap">
+      <div className="Poppins text-#ffffffce font-700 text-42 md:text-132 text-center leading-[1] md:leading-[0.8] whitespace-nowrap Poppins-ExtraBold">
         <div>Savior of the</div>
         <div>Persecuted Puppy</div>
       </div>

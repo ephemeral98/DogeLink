@@ -9,6 +9,7 @@ import '@css/reset.css';
 import '@css/common.css';
 import 'virtual:uno.css';
 import 'animate.css';
+import '@/assets/font/index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>

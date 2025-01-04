@@ -14,7 +14,7 @@ const FooterWrap = styled.div`
 `;
 
 const Footer = () => {
-  return <FooterWrap>© 2024 DOGELINK</FooterWrap>;
+  return <FooterWrap className="Poppins-SemiBold">© 2024 DOGELINK</FooterWrap>;
 };
 
 export default Footer;

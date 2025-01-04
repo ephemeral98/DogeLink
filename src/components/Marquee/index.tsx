@@ -36,7 +36,7 @@ const MarqueeWrap = styled.div`
 const Marquee: FC<{ children: ReactNode }> = (props) => {
   return (
     <MarqueeWrap>
-      <p className="moving-text">{props.children}</p>
+      <p className="moving-text Poppins-ExtraBold">{props.children}</p>
     </MarqueeWrap>
   );
 };
