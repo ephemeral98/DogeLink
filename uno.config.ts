@@ -13,21 +13,15 @@ export default defineConfig({
       md: '750px',
       lg: '1024px',
       xl: '1280px',
-      pc: '1920px',
+      pc: '1440px',
+      plus: '1920px',
     },
 
     colors: {
-      black: '#161616',
-      golden: '#FFD770',
-      purple: '#9340FFFF',
-      red: '#E33C64FF',
-      green: '#00BAAEFF',
-      lightgray: '#A6A6A6FF',
-      blue: '#4A4AFFFF',
+      yellow: '#FFD100',
     },
   },
 
-  // 常用css简化rem单位: w-30 即：width: 30rem
   rules: [
     [/^w-([\.\d]+)$/, ([_, num]) => ({ width: `${num}rem` })],
     [/^min-w-([\.\d]+)$/, ([_, num]) => ({ 'min-width': `${num}rem` })],
@@ -75,5 +69,6 @@ export default defineConfig({
     ['flex-center', { display: 'flex', 'justify-content': 'center', 'align-items': 'center' }],
     ['disable', { filter: 'grayscale(98%)', opacity: '0.25' }],
     [/^font-([\.\d]+)$/, ([_, num]) => ({ 'font-weight': `${num}` })],
+    [/^flex-([\.\d]+)$/, ([_, num]) => ({ flex: `0 0 ${num}rem` })],
   ],
 });

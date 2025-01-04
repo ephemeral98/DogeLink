@@ -8,6 +8,9 @@ import {
   MutableRefObject,
 } from 'react';
 
+import clipboard from 'clipboard';
+import { Message } from '@arco-design/web-react';
+
 /**
  * 类似vue的nextTick，页面渲染前的临门一脚
  * @param callBack
@@ -43,11 +46,32 @@ export const useSyncCallback = (callback: () => void) => {
 };
 
 /**
- * 立即更新状态 
+ * 立即更新状态
  */
 export const useUpdateRef = <T>(val: T): [MutableRefObject<T>, DispatchWithoutAction] => {
   const valState = useRef(val);
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
 
   return [valState, forceUpdate];
+};
+
+/**
+ * 复制操作
+ * 将需要的 className = 'cpy-btn'
+ * 需要在 确保能获取到DOM 的生命周期中调用，比如 onMounted
+ */
+export const useCopy = () => {
+  useEffect(() => {
+    const cpyer = new clipboard('.copy-btn');
+
+    cpyer.on('success', (e: any) => {
+      Message.success('Copy successful');
+
+      e.clearSelection();
+    });
+
+    return () => {
+      cpyer.destroy();
+    };
+  }, []);
 };
