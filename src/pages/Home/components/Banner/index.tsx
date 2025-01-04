@@ -17,6 +17,26 @@ const BannerWrap = styled.div`
       margin: 0 auto;
     }
 
+    .tokenomics-text {
+      .text-1 {
+        display: block;
+      }
+
+      .text-2 {
+        display: none;
+      }
+
+      &:hover {
+        .text-1 {
+          display: none;
+        }
+
+        .text-2 {
+          display: block;
+        }
+      }
+    }
+
     .doge-wrap {
       .doge-1 {
         display: block;
@@ -63,7 +83,7 @@ const Banner = () => {
     <BannerWrap className="bg-yellow">
       <div className="banner-container">
         <main className="banner-main">
-          <div className="flex justify-center items-center flex-col Gilroy-Bold w-20">
+          {/* <div className="flex justify-center items-center flex-col Gilroy-Bold w-20">
             <div>T</div>
             <div>O</div>
             <div>K</div>
@@ -74,6 +94,19 @@ const Banner = () => {
             <div>I</div>
             <div>C</div>
             <div>S</div>
+          </div> */}
+
+          <div className="tokenomics-text">
+            <img
+              src={require('@img/home/tokenomics-text.png')}
+              alt=""
+              className="w-20 md:w-31 text-1"
+            />
+            <img
+              src={require('@img/home/tokenomics-text-ite.png')}
+              alt=""
+              className="w-20 md:w-31 text-2"
+            />
           </div>
 
           <div className="doge-wrap w-250 h-250 md:w-558 md:h-558">
@@ -103,15 +136,9 @@ const Banner = () => {
       </div>
 
       <Marquee>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, nemo quaerat? Quibusdam modi
-        fugit alias, repellendus sequi porro sapiente dignissimos. Quas et laboriosam quia
-        cupiditate, doloremque amet, quis rerum modi, necessitatibus dolorum voluptatum est
-        inventore saepe? Eligendi fugiat voluptate atque veniam repellat sed illum itaque deleniti
-        reprehenderit earum nisi magnam reiciendis nihil beatae laboriosam ut totam illo molestiae
-        cumque fugit, dignissimos magni incidunt alias nostrum. Maxime animi quisquam corrupti
-        voluptate cum aperiam debitis quia eius, cupiditate, laboriosam soluta provident aspernatur,
-        quod recusandae quidem? Illum distinctio aliquid nulla cum minima. Corporis aut
-        exercitationem quasi dolorum odio quam fugit ea, unde dicta!
+        Supreme Adorable Overlord of the Woof Realm • Butt-Sniffing Enthusiast • Conqueror of
+        Alternate Realms • Bone-Crushing Battle Commander • Sofa Cushion Destroyer • Lamenting Table
+        Leg Artist • Ascendant Leader of the Canine World • Venerable and Mighty Grand Marshal •
       </Marquee>
     </BannerWrap>
   );
