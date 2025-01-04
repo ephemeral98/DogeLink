@@ -8,6 +8,9 @@ import { useCopy } from '@/gHooks/index';
 import Footer from './components/Footer';
 import useAppStore from './store/appStore';
 import { bpThrottle } from './gHooks/useDeb';
+import { styled } from 'styled-components';
+
+const AppWrap = styled.div``;
 
 function App() {
   const appStore = useAppStore();
@@ -26,12 +29,12 @@ function App() {
   setRouteBefore(onRouterBefore);
   const elements = useRoutes(transformRoutes(router));
   return (
-    <div className="app-container relative">
+    <AppWrap className="app-container relative">
       <Topbar />
       <div className="main-container">{elements}</div>
 
       <Footer />
-    </div>
+    </AppWrap>
   );
 }
 

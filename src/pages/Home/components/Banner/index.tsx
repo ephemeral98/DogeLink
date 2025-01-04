@@ -18,21 +18,33 @@ const BannerWrap = styled.div`
     }
 
     .tokenomics-text {
+      position: relative;
+
+      .text-1,
+      .text-2 {
+        transition: all 0.2s;
+        transform: translate(0, -50%);
+      }
+
       .text-1 {
-        display: block;
+        opacity: 1;
+        position: absolute;
+        top: 0;
       }
 
       .text-2 {
-        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
       }
 
       &:hover {
         .text-1 {
-          display: none;
+          opacity: 0;
         }
 
         .text-2 {
-          display: block;
+          opacity: 1;
         }
       }
     }

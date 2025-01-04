@@ -23,6 +23,6 @@ export function $p(param: string): string {
  * @param param
  * @returns
  */
-export function $t(param: string, args): string {
-  return i18n.t(param, args);
+export function $t(param: string, args: any): string {
+  return i18n.t(param, args) as any;
 }

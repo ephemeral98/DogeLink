@@ -5,7 +5,7 @@ export type IMode = 'devTest' | 'devMain' | 'buildTest' | 'buildMain' | 'childTe
  * @param mode 模式
  * @param env 环境：true本地开发、false打包
  */
-export function getEnv(mode) {
+export function getEnv(mode: string) {
   const config = {
     contractEnv: true, // 合约环境：true测试网、false主网
     routerBase: './', // 路由基本路径

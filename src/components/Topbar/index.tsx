@@ -29,12 +29,11 @@ const Topbar = () => {
       <div className="flex items-center">
         <div className="flex-center">
           <div className="text-12 md:text-14 font-700 whitespace-nowrap">DOGER ARMY</div>
-          <img src={'/logo-doge.png'} alt="" className="w-17" />
+          <img src={require('@img/common/doge.gif')} alt="" className="w-17" />
         </div>
 
         <div className="flex-center ml-4 md:ml-52">
-          <div className="text-12 md:text-14 font-700 whitespace-nowrap">TO DA MOON</div>
-          <img src={'/logo-doge.png'} alt="" className="w-17" />
+          <div className="text-12 md:text-14 font-700 whitespace-nowrap">TO DA MOON🚀</div>
         </div>
       </div>
     </TopbarWrap>
