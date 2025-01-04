@@ -1,4 +1,4 @@
-import { $width, phoneSize } from '@/styled/mediaSize';
+import { $marginRight, $width, phoneSize } from '@/styled/mediaSize';
 import { flexPos } from '@/styled/mixin';
 import React from 'react';
 import { styled } from 'styled-components';
@@ -6,6 +6,10 @@ import { styled } from 'styled-components';
 const DoomsdayWrap = styled.div`
   padding: 156rem 0 170rem;
   background-color: #fed100;
+
+  @media (max-width: ${phoneSize}) {
+    padding: 60rem 0 150rem;
+  }
 
   .doomsday-main {
     ${$width('100%', '100%', '1190rem')}
@@ -15,6 +19,11 @@ const DoomsdayWrap = styled.div`
     @media (max-width: ${phoneSize}) {
       flex-direction: column;
     }
+  }
+
+  .img-behold {
+    ${$width('333rem', '40vw', '519rem')}
+    ${$marginRight('0', '113rem', '113rem')}
   }
 
   .aka {
@@ -32,14 +41,10 @@ const Doomsday = () => {
   return (
     <DoomsdayWrap>
       <main className="doomsday-main">
-        <img
-          src={require('@img/home/img-behold.png')}
-          alt=""
-          className="w-333 md:w-519 mr-0 md:mr-113"
-        />
+        <img src={require('@img/home/img-behold.png')} alt="" className="img-behold" />
 
         <section>
-          <div className="mb-12 text-28 md:text-32 font-700 text-center md:text-left">
+          <div className="mt-60 md:mt-0 mb-12 text-28 md:text-32 font-700 text-center md:text-left">
             Frank Doomsday
           </div>
           <div className="px-30 md:px-0 Poppins-LightItalic">

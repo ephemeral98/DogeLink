@@ -44,7 +44,11 @@ const TokenomicsWrap = styled.div`
   }
 
   .buy-now {
-    transition: all 0.5s;
+    transition: transform 0.5s;
+
+    @media (min-width: ${phoneSize}) {
+      transition: all 0.5s;
+    }
 
     &:hover {
       transform: rotateZ(-5deg) scale(1.1);
@@ -83,18 +87,18 @@ const Tokenomics = () => {
       />
 
       <main className="flex-center mt-70 flex-col md:flex-row">
-        <section className="token-supply mr-0 md:mr-26">
+        <section className="token-supply mr-0 md:mr-26 z-9">
           <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
           <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">
             100,000,000,000,000
           </div>
-          <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-bold buy-now">
+          <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-Bold buy-now">
             BUY NOW
           </button>
 
           <div className="flex-center mt-31">
-            <div className="text-12">Powered by</div>
-            <img src={require('@img/common/img-solana.png')} alt="" className="w-101" />
+            <div className="text-12 Poppins-SemiBold">Powered by</div>
+            <img src={require('@img/common/img-solana.png')} alt="" className="w-101 ml-9" />
           </div>
         </section>
 
@@ -105,17 +109,17 @@ const Tokenomics = () => {
           </div>
 
           <div className="addr flex-center h-39 md:h-48 px-20 mt-20 relative z-99">
-            <div className="ParrickHandSC mr-10 text-10 md:text-21 font-400">{addr}</div>
+            {/* <div className="ParrickHandSC mr-10 text-10 md:text-21 font-400">{addr}</div>
             <img
               data-clipboard-text={addr}
               src={require('@img/common/icon-copy.svg')}
               alt=""
               className="w-13 md:w-22 copy-btn"
-            />
+            /> */}
           </div>
 
           <a className="view-into-solana">
-            <span className="underline">VIEW IN SOLANA</span>
+            <span className="underline Poppins-Bold">VIEW IN SOLANA</span>
             <img src={require('@img/common/icon-arrow-bar.svg')} alt="" className="w-22 ml-10" />
           </a>
         </section>

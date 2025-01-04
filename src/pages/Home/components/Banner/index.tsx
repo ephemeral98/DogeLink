@@ -3,7 +3,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 import Button from '@/components/Buttons';
 import Marquee from '@/components/Marquee';
-import { $bottom, $height, $paddingX, $width } from '@/styled/mediaSize';
+import { $bottom, $fontSize, $height, $paddingX, $width, phoneSize } from '@/styled/mediaSize';
 
 const BannerWrap = styled.div`
   .banner-container {
@@ -53,12 +53,18 @@ const BannerWrap = styled.div`
       /* width: 250rem;
       height: 250rem;
       position: relative; */
+      ${flexPos('center')}
 
       .doge-1,
       .doge-2 {
         /* position: absolute;
         left: 0;
         top: 0; */
+
+        @media (min-width: ${phoneSize}) and (max-width: 1000px) {
+          width: 50vw !important;
+          height: 50vw !important;
+        }
       }
 
       .doge-1 {
@@ -97,11 +103,32 @@ const BannerWrap = styled.div`
       ${$height('46rem', '50rem', '50rem')}
       ${$bottom('-70rem', '-130rem', '-130rem')}
       white-space: nowrap;
-      transition: all 0.5s;
+      transition: transform 0.5s;
 
       &:hover {
         transform: translate(-50%, 0) rotateZ(-5deg) scale(1.1);
       }
+
+      @media (min-width: ${phoneSize}) {
+        transition: all 0.5s;
+      }
+    }
+  }
+
+  .slogan {
+    color: #ffffffce;
+    font-weight: 700;
+    ${$fontSize('42rem', '132rem', '132rem')}
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+
+    @media (min-width: ${phoneSize}) {
+      line-height: 0.8;
+    }
+
+    @media (min-width: ${phoneSize}) and (max-width: 1300px) {
+      font-size: 10vw !important;
     }
   }
 `;
@@ -158,7 +185,7 @@ const Banner = () => {
         <Button className="buy-now Poppins-Bold">BUY NOW</Button>
       </div>
 
-      <div className="Poppins text-#ffffffce font-700 text-42 md:text-132 text-center leading-[1] md:leading-[0.8] whitespace-nowrap Poppins-ExtraBold">
+      <div className="slogan Poppins-ExtraBold">
         <div>Savior of the</div>
         <div>Persecuted Puppy</div>
       </div>

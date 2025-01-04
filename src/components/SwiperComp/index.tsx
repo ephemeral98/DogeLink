@@ -26,7 +26,7 @@ const swiperOptions = {
   mousewheel: true, // 鼠标滚轮
   slidesPerView: 3, //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。
   centeredSlides: true, //设置slide居中
-  spaceBetween: 20, // 每个item的间距，也可以用scss穿透实现
+  spaceBetween: 0, // 每个item的间距，也可以用scss穿透实现
   coverflowEffect: {
     rotate: 0, //slide做3d旋转时Y轴的旋转角度。默认50。
     stretch: -10, //每个slide之间的拉伸值（距离），越大slide靠得越紧。 默认0。

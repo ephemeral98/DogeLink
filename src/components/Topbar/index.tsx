@@ -5,7 +5,7 @@ import { styled } from 'styled-components';
 const TopbarWrap = styled.div`
   ${$width('100%', '80%', '80%')}
   ${flexPos('space-between')}
-  padding: 24px 100px 0;
+  padding: 24rem 100rem 0;
   position: absolute;
   left: 0;
   right: 0;
@@ -13,9 +13,8 @@ const TopbarWrap = styled.div`
   top: 0;
   width: 100%;
   z-index: 99;
-  /* background-color: pink; */
 
-  ${$paddingX('10rem', '100px', '100px')}
+  ${$paddingX('10rem', '1vw', '100rem')}
 `;
 
 const Topbar = () => {

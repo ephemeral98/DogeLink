@@ -2,15 +2,25 @@ import SwiperComp from '@/components/SwiperComp';
 import { FC } from 'react';
 import { SwiperSlide } from 'swiper/react';
 import { styled } from 'styled-components';
+import { phoneSize } from '@/styled/mediaSize';
 
 const PcSlidesWrap = styled.div`
   width: 1200rem;
   position: relative;
   margin: 68rem auto 0;
 
+  @media (min-width: ${phoneSize}) and (max-width: 1300px) {
+    width: 91%;
+  }
+
   .img-content {
     width: 373rem;
     height: 373rem;
+
+    @media (min-width: ${phoneSize}) and (max-width: 1300px) {
+      width: 28vw;
+      height: 28vw;
+    }
   }
 
   .slide-arrow {

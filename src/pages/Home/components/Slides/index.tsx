@@ -8,7 +8,6 @@ import { $paddingX, $paddingY, phoneSize } from '@/styled/mediaSize';
 
 const SlidesWrap = styled.div`
   background-image: url(${require('@img/slides/bg-slides.png')});
-  /* background-size: 100% auto; */
   background-size: cover;
   background-position: 100% 120%;
   background-color: #f3c315;
@@ -20,6 +19,11 @@ const SlidesWrap = styled.div`
   @media (max-width: ${phoneSize}) {
     background-size: 100%;
     background-position: 100% 0%;
+  }
+
+  @media (min-width: ${phoneSize}) and (max-width: 1300px) {
+    background-position: 50% 10%;
+    background-size: 100% auto;
   }
 `;
 

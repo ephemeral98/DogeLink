@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { styled } from 'styled-components';
 import VideoComp from '@/components/VideoComp';
-import { $fontSize, $height, $width } from '@/styled/mediaSize';
+import { $fontSize, $height, $width, phoneSize } from '@/styled/mediaSize';
 
 interface IToTheMoon {
   className?: string;
@@ -34,6 +34,23 @@ const ToTheMoonWrap = styled.div`
     font-weight: bold;
     white-space: nowrap;
     color: #f3c315;
+
+    @media (min-width: ${phoneSize}) and (max-width: 1474px) {
+      font-size: 14vw;
+    }
+  }
+
+  @keyframes moveToCorner {
+    0% {
+      left: 50%;
+      bottom: 0;
+      transform: translate(-239rem, 0);
+    }
+    100% {
+      left: 100%;
+      bottom: 60%;
+      transform: translate(-239rem, 0);
+    }
   }
 
   .doge-plane {
@@ -41,6 +58,8 @@ const ToTheMoonWrap = styled.div`
     position: absolute;
     left: 50%;
     bottom: 0;
+    animation: moveToCorner 3s infinite;
+    z-index: 9;
   }
 `;
 
