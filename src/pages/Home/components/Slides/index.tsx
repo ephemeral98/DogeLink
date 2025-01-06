@@ -46,7 +46,7 @@ const Slides = () => {
   ]);
 
   return (
-    <SlidesWrap>
+    <SlidesWrap id='dogeArmies'>
       <HomeTitle>The Doge Armies</HomeTitle>
 
       <Suspense>

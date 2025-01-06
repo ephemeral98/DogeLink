@@ -4,6 +4,7 @@ import { styled } from 'styled-components';
 import Button from '@/components/Buttons';
 import Marquee from '@/components/Marquee';
 import { $bottom, $fontSize, $height, $paddingX, $width, phoneSize } from '@/styled/mediaSize';
+import slideIntoView from '@/utils/slideIntoView';
 
 const BannerWrap = styled.div`
   .banner-container {
@@ -151,7 +152,12 @@ const Banner = () => {
             <div>S</div>
           </div> */}
 
-          <div className="tokenomics-text">
+          <div
+            className="tokenomics-text cursor-pointer"
+            onClick={() => {
+              slideIntoView(document.getElementById('Tokenomics'), window, 104);
+            }}
+          >
             <img
               src={require('@img/home/tokenomics-text.png')}
               alt=""
@@ -174,11 +180,11 @@ const Banner = () => {
           </div>
 
           <div className="social-media">
-            <img src={require('@img/common/icon-discord.svg')} alt="" className="w-20 md:w-26" />
+            {/* <img src={require('@img/common/icon-discord.svg')} alt="" className="w-20 md:w-26" /> */}
             <img src={require('@img/common/icon-x.svg')} alt="" className="w-20 md:w-26" />
             <img src={require('@img/common/icon-tg.svg')} alt="" className="w-20 md:w-26" />
-            <img src={require('@img/common/icon-tiktok.svg')} alt="" className="w-20 md:w-26" />
-            <img src={require('@img/common/icon-ins.svg')} alt="" className="w-20 md:w-26" />
+            {/* <img src={require('@img/common/icon-tiktok.svg')} alt="" className="w-20 md:w-26" /> */}
+            {/* <img src={require('@img/common/icon-ins.svg')} alt="" className="w-20 md:w-26" /> */}
           </div>
         </main>
 

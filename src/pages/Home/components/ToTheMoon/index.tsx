@@ -74,7 +74,7 @@ const ToTheMoon: FC<IToTheMoon> = (props) => {
 
   const onError = () => {};
   return (
-    <ToTheMoonWrap>
+    <ToTheMoonWrap id='toTheMoon'>
       <img src={require('@img/home/img-moon.png')} alt="" className="img-moon" />
 
       <div className="to-the-moon-text Poppins-ExtraBold">TO THE MOON</div>

@@ -60,7 +60,7 @@ const Tokenomics = () => {
   const [addr, setAddr] = useState('EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm');
 
   return (
-    <TokenomicsWrap>
+    <TokenomicsWrap id="Tokenomics">
       <HomeTitle>Tokenomics</HomeTitle>
 
       <img
