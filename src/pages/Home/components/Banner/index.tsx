@@ -177,7 +177,7 @@ const Banner = () => {
 
         {appStore.curDevice !== 'phone' && (
           <img
-            className="w-600 lg:w-846 ml-100 absolute right-0 bottom-0 z-2"
+            className="w-600 lg:w-600 ml-100 absolute right-0 bottom-0 z-2"
             src={require('@img/home/banner/banner-doge.png')}
             alt=""
           />

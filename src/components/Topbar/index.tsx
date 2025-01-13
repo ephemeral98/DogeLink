@@ -22,7 +22,7 @@ const Topbar = () => {
   return (
     <TopbarWrap>
       <div className="flex-center">
-        <img src={'/logo-doge.png'} alt="" className="w-38 md:w-57" />
+        <img src={'/icon-doge.png'} alt="" className="w-38 md:w-57" />
         <div className="ml-10 text-24 font-800 Poppins-Bold">DOGELINK</div>
       </div>
 

@@ -4,6 +4,7 @@ import {
   $paddingLeft,
   $paddingTop,
   $width,
+  padSize,
   phoneSize,
 } from '@/styled/mediaSize';
 import { flexPos } from '@/styled/mixin';
@@ -21,16 +22,27 @@ const BeHoldWrap = styled.div`
   position: relative;
   overflow: hidden;
 
-  ${$height('80vh', '100vh', '100vh')}
+  ${$height('150vw', '1300rem', '1300rem')}
   ${$paddingTop('30rem', '184rem', '184rem')}
   ${$paddingLeft('0', '94rem', '94rem')}
 
-  @media (max-width: ${phoneSize}) {
+  @media (min-width: ${phoneSize}) {
+    /* height: 150vh; */
   }
 
   .bg-star-wrap {
     width: 100%;
-    height: 100vh;
+    /* min-height: 100vh; */
+    height: 100%;
+
+    /* @media (min-width: ${phoneSize}) {
+      height: 100%;
+    }
+
+    @media (max-width: ${phoneSize}) {
+      height: 150vw;
+    } */
+
     position: absolute;
     position: absolute;
     left: 0;
@@ -74,7 +86,7 @@ const BeHold = () => {
           <div className="text-18 lg:text-24 Poppins-Bold mt-10 lg:mt-45">
             Join the Doge Army, NOW!
           </div>
-          {appStore.curDevice === 'pc' && (
+          {appStore.curDevice !== 'phone' && (
             <button className="buy-now Poppins-SemiBold mt-30" onClick={() => buyNowLink()}>
               BUY NOW
             </button>
