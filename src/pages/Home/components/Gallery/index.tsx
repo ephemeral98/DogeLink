@@ -8,6 +8,7 @@ import {
   $paddingBottom,
   $paddingX,
   $paddingY,
+  padSize,
   phoneSize,
 } from '@/styled/mediaSize';
 
@@ -22,7 +23,12 @@ const GalleryWrap = styled.div`
     grid-gap: 23rem;
     grid-template-columns: repeat(3, auto);
 
-    @media (max-width: ${phoneSize}) {
+    @media (max-width: ${padSize}) {
+      padding: 0 30rem;
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @media (max-width: 838px) {
       padding: 0 30rem;
       grid-template-columns: repeat(1, auto);
     }

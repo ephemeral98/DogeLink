@@ -49,6 +49,11 @@ const BannerWrap = styled.div`
 
   .banner-container {
     ${$width('100%', '100%', '1440rem')}
+
+    @media (min-width: 1280px) and (max-width: 1550px) {
+      width: 100%;
+    }
+
     height: 100%;
     position: relative;
     margin: 0 auto;
@@ -57,6 +62,10 @@ const BannerWrap = styled.div`
     @media (max-width: ${phoneSize}) {
       ${flexPos('center')}
       flex-direction: column;
+    }
+
+    @media (min-width: ${phoneSize}) and (max-width: 1024px) {
+      align-items: flex-start;
     }
 
     .buy-btn {
@@ -142,7 +151,7 @@ const Banner = () => {
 
         {appStore.curDevice !== 'phone' && (
           <img
-            className="w-846 ml-100 absolute right-0 bottom-0 z-2"
+            className="w-600 lg:w-846 ml-100 absolute right-0 bottom-0 z-2"
             src={require('@img/home/banner/banner-doge.png')}
             alt=""
           />

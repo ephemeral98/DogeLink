@@ -67,29 +67,29 @@ const BeHold = () => {
         <VideoComp src={require('@/assets/video/bg-star.mp4')} className="bg-star" />
       </div>
 
-      <main className="w-full md:w-1440 relative mx-auto">
+      <main className="w-full pc:w-1440 relative mx-auto">
         <section className="be-hold-content">
-          <div className="text-18 md:text-24 Poppins-Bold mt-10 md:mt-45">
+          <div className="text-18 lg:text-24 Poppins-Bold mt-10 lg:mt-45">
             Join the Doge Army, NOW!
           </div>
-          {appStore.curDevice !== 'phone' && (
+          {appStore.curDevice === 'pc' && (
             <button className="buy-now Poppins-SemiBold mt-30">BUY NOW</button>
           )}
 
           <img
             src={require('@img/home/beHold/behold-doge-1.png')}
             alt=""
-            className="absolute left-[-13rem] md:left-0 top-380 md:top-280 w-164 md:w-335 z-2"
+            className="absolute left-[-13rem] md:left-[-100rem] lg:left-0 top-380 lg:top-280 w-164 lg:w-335 z-2"
           />
           <img
             src={require('@img/home/beHold/behold-doge-2.png')}
             alt=""
-            className="absolute left-0 md:left-[28%] top-100 md:top-290 w-full md:w-600"
+            className="absolute left-0 lg:left-[28%] top-100 lg:top-290 w-full md:w-700 lg:w-600"
           />
           <img
             src={require('@img/home/beHold/behold-doge-3.png')}
             alt=""
-            className="absolute right-[-50rem] md:right-0 top-50 md:top-110 w-158 md:w-349"
+            className="absolute right-[-50rem] lg:right-0 top-50 lg:top-110 w-158 lg:w-349"
           />
         </section>
       </main>

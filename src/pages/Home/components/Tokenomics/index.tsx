@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from 'styled-components';
 import HomeTitle from '@/components/HomeTitle';
-import { $paddingX, $width, phoneSize } from '@/styled/mediaSize';
+import { $paddingX, $width, padSize, phoneSize } from '@/styled/mediaSize';
 
 const TokenomicsWrap = styled.div`
   background-size: cover;
@@ -36,7 +36,7 @@ const TokenomicsWrap = styled.div`
     margin-top: 40rem;
     width: fit-content;
 
-    @media (max-width: ${phoneSize}) {
+    @media (max-width: ${padSize}) {
       margin: 40rem auto 0;
     }
   }
@@ -68,7 +68,7 @@ const Tokenomics = () => {
     <TokenomicsWrap id="Tokenomics">
       <HomeTitle>Tokenomics</HomeTitle>
 
-      <main className="flex-center mt-24 md:mt-70 flex-col md:flex-row">
+      <main className="flex-center mt-24 md:mt-70 flex-col lg:flex-row">
         <section className="token-supply mr-0 md:mr-26 z-9">
           <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
           <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">
@@ -85,7 +85,7 @@ const Tokenomics = () => {
         </section>
 
         <section className="mt-26 md:mt-0">
-          <div className="text-center md:text-left text-21 md:text-21 font-600 ChildWriting-Regular">
+          <div className="text-center lg:text-left text-21 md:text-21 font-600 ChildWriting-Regular">
             <div className="text-yellow">
               As friends, you awesome humans need to grab my tokens.
             </div>
