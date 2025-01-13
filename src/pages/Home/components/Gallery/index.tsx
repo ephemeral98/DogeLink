@@ -90,7 +90,7 @@ const Gallery = () => {
   ]);
 
   return (
-    <GalleryWrap id="dogeArmies">
+    <GalleryWrap id="gallery">
       <HomeTitle>DOGE ARMY GALLERY</HomeTitle>
 
       <main className="gallery-list">

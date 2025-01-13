@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 import HomeTitle from '@/components/HomeTitle';
 import { $paddingX, $width, padSize, phoneSize } from '@/styled/mediaSize';
+import { buyNowLink } from '@/utils';
 
 const TokenomicsWrap = styled.div`
   background-size: cover;
@@ -74,7 +75,10 @@ const Tokenomics = () => {
           <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">
             1,000,000,000
           </div>
-          <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-Bold buy-now">
+          <button
+            onClick={() => buyNowLink()}
+            className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-Bold buy-now"
+          >
             BUY NOW
           </button>
 

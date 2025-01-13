@@ -75,3 +75,9 @@ export function plusStar(str: string, frontLen: number, endLen: number) {
   }
   return str.substring(0, frontLen) + xing + str.substring(str.length - endLen);
 }
+
+export const buyNowLink = () => {
+  window.open(
+    'https://raydium.io/swap/?inputCurrency=sol&outputCurrency=24gG4br5xFBRmxdqpgirtxgcr7BaWoErQfc2uyDp2Qhh&inputAmount=0.491856&outputAmount=2552.950403&fixed=in&inputMint=sol&outputMint=6oZYqMfGpk6xANmXqsTVGVMtC8eP9vExiwseE3ZBpump'
+  );
+};

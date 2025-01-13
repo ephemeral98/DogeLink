@@ -12,6 +12,7 @@ import { styled } from 'styled-components';
 import HomeTitle from '@/components/HomeTitle';
 import VideoComp from '@/components/VideoComp';
 import useAppStore from '@/store/appStore';
+import { buyNowLink } from '@/utils';
 
 const BeHoldWrap = styled.div`
   padding-top: 184rem;
@@ -73,7 +74,9 @@ const BeHold = () => {
             Join the Doge Army, NOW!
           </div>
           {appStore.curDevice === 'pc' && (
-            <button className="buy-now Poppins-SemiBold mt-30">BUY NOW</button>
+            <button className="buy-now Poppins-SemiBold mt-30" onClick={() => buyNowLink()}>
+              BUY NOW
+            </button>
           )}
 
           <img

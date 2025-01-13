@@ -16,6 +16,7 @@ import {
   $width,
   phoneSize,
 } from '@/styled/mediaSize';
+import { buyNowLink } from '@/utils';
 
 const BannerWrap = styled.div`
   position: relative;
@@ -131,7 +132,9 @@ const Banner = () => {
           <div className="text-22 md:text-42 ChildWriting-Regular font-bold">
             Savior of the Persecuted Puppy
           </div>
-          <button className="buy-btn Poppins-SemiBold">BUY NOW</button>
+          <button className="buy-btn Poppins-SemiBold" onClick={() => buyNowLink()}>
+            BUY NOW
+          </button>
 
           {appStore.curDevice === 'phone' && (
             <img className="w-[90%]" src={require('@img/home/banner/banner-doge.png')} alt="" />

@@ -26,7 +26,13 @@ const Topbar = () => {
         <div className="ml-10 text-24 font-800 Poppins-Bold">DOGELINK</div>
       </div>
 
-      <button className="uppercase h-30 md:h-48 px-15 md:px-24 bg-yellow rounded-100 text-12 md:text-16">
+      <button
+        onClick={() => {
+          console.log('111');
+          slideIntoView('');
+        }}
+        className="uppercase h-30 md:h-48 px-15 md:px-24 bg-yellow rounded-100 text-12 md:text-16"
+      >
         Community Gallery
       </button>
     </TopbarWrap>
