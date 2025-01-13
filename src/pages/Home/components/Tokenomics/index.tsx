@@ -19,9 +19,9 @@ const TokenomicsWrap = styled.div`
   }
 
   .addr {
-    background-color: #ffeaa0;
     border-radius: 20rem;
     font-size: 21rem;
+    border: solid 1px #ffd100;
   }
 
   .view-into-solana {
@@ -81,11 +81,15 @@ const Tokenomics = () => {
 
         <section className="mt-26 md:mt-0">
           <div className="text-center md:text-left text-21 md:text-21 font-600 ChildWriting-Regular">
-            <div>As friends, you awesome humans need to grab my tokens.</div>
+            <div className="text-yellow">
+              As friends, you awesome humans need to grab my tokens.
+            </div>
           </div>
 
           <div className="addr flex-center h-39 md:h-48 px-20 mt-20 relative z-99">
-            <div className="ParrickHandSC mr-10 text-10 md:text-21 font-400">{addr}</div>
+            <div className="ParrickHandSC text-yellow mr-10 text-10 md:text-21 font-400">
+              {addr}
+            </div>
             <img
               data-clipboard-text={addr}
               src={require('@img/common/icon-copy.svg')}
@@ -95,7 +99,7 @@ const Tokenomics = () => {
           </div>
 
           <a className="view-into-solana">
-            <span className="underline Poppins-Bold">VIEW IN SOLANA</span>
+            <span className="underline Poppins-Medium text-yellow">VIEW IN SOLANA</span>
             <img src={require('@img/common/icon-arrow-bar.svg')} alt="" className="w-22 ml-10" />
           </a>
         </section>

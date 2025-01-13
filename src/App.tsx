@@ -5,7 +5,7 @@ import { transformRoutes, setRouteBefore } from '@/router/RouterGuard';
 import initRem from './utils/initRem';
 import Topbar from '@cps/Topbar';
 import { useCopy } from '@/gHooks/index';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import useAppStore from './store/appStore';
 import { bpThrottle } from './gHooks/useDeb';
 import { styled } from 'styled-components';
@@ -33,7 +33,7 @@ function App() {
       <Topbar />
       <div className="main-container">{elements}</div>
 
-      <Footer />
+      {/* <Footer /> */}
     </AppWrap>
   );
 }

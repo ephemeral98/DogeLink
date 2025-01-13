@@ -5,15 +5,16 @@ import Slides from './components/Slides';
 import ToTheMoon from './components/ToTheMoon';
 import Tokenomics from './components/Tokenomics';
 import Doomsday from './components/Doomsday';
-import ToTop from '@/components/ToTop';
+// import ToTop from '@/components/ToTop';
 import Gallery from './components/Gallery';
+import BeHold from './components/BeHold';
 
 const HomeWrap = styled.div``;
 
 const Home = () => {
   return (
     <HomeWrap>
-      <ToTop />
+      {/* <ToTop /> */}
 
       <Banner />
 
@@ -27,7 +28,7 @@ const Home = () => {
 
       <Tokenomics />
 
-      {/* <Doomsday /> */}
+      <BeHold />
     </HomeWrap>
   );
 };

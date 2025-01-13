@@ -4,21 +4,12 @@ import { styled } from 'styled-components';
 
 const HomeTitleWrap = styled.div`
   font-weight: 700;
-  ${$fontSize('28rem', '64rem', '64rem')}
+  ${$fontSize('28rem', '72rem', '72rem')}
   width: fit-content;
   margin: 0 auto;
   position: relative;
-  line-height: 1.2;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    ${$height('12rem', '33rem', '33rem')}
-    background-color: #ffeaa0;
-  }
+  line-height: 1;
+  color: #ffd100;
 
   .title-content {
     position: relative;
@@ -29,7 +20,7 @@ const HomeTitleWrap = styled.div`
 const HomeTitle: FC<{ children: ReactNode }> = (props) => {
   return (
     <HomeTitleWrap>
-      <div className="title-content Poppins-ExtraBold">{props.children}</div>
+      <div className="title-content ChildWriting-Regular">{props.children}</div>
     </HomeTitleWrap>
   );
 };

@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import i18next from '@/locales/i18n';
 
 export const TestLangWrap = styled.div`
-  color: red;
-  background-color: skyblue;
   height: 100vh;
   display: flex;
   justify-content: center;

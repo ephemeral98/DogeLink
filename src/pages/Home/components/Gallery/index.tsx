@@ -5,7 +5,6 @@ import useAppStore from '@/store/appStore';
 import { $paddingX, $paddingY, phoneSize } from '@/styled/mediaSize';
 
 const GalleryWrap = styled.div`
-  background-color: skyblue;
   margin-top: 118rem;
 
   .gallery-list {
@@ -15,7 +14,6 @@ const GalleryWrap = styled.div`
     place-items: center;
     grid-gap: 23rem;
     grid-template-columns: repeat(3, auto);
-    background-color: pink;
   }
 
   .see-more {
