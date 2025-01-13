@@ -1,206 +1,95 @@
 import { flexPos } from '@/styled/mixin';
 import React from 'react';
 import { styled } from 'styled-components';
-import Button from '@/components/Buttons';
-import Marquee from '@/components/Marquee';
-import { $bottom, $fontSize, $height, $paddingX, $width, phoneSize } from '@/styled/mediaSize';
-import slideIntoView from '@/utils/slideIntoView';
+import VideoComp from '@/components/VideoComp';
 
 const BannerWrap = styled.div`
-  .banner-container {
-    padding: 81rem 100rem 0;
-    position: relative;
-    ${$paddingX('30rem', '100rem', '100rem')}
+  padding-top: 184rem;
+  padding-left: 94rem;
+  position: relative;
+  height: 100vh;
 
-    .banner-main {
-      ${$width('100%', '80%', '80%')}
-      ${flexPos('space-between')}
-      margin: 0 auto;
-    }
+  .bg-star-wrap {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    position: absolute;
+    left: 0;
+    top: 0;
 
-    .tokenomics-text {
-      position: relative;
-
-      .text-1,
-      .text-2 {
-        transition: all 0.2s;
-        transform: translate(0, -50%);
-      }
-
-      .text-1 {
-        opacity: 1;
-        position: absolute;
-        top: 0;
-      }
-
-      .text-2 {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-      }
-
-      &:hover {
-        .text-1 {
-          opacity: 0;
-        }
-
-        .text-2 {
-          opacity: 1;
-        }
-      }
-    }
-
-    .doge-wrap {
-      /* width: 250rem;
-      height: 250rem;
-      position: relative; */
-      ${flexPos('center')}
-
-      .doge-1,
-      .doge-2 {
-        /* position: absolute;
-        left: 0;
-        top: 0; */
-
-        @media (min-width: ${phoneSize}) and (max-width: 1000px) {
-          width: 50vw !important;
-          height: 50vw !important;
-        }
-      }
-
-      .doge-1 {
-        display: block;
-      }
-
-      .doge-2 {
-        display: none;
-      }
-
-      &:hover {
-        .doge-1 {
-          display: none;
-        }
-
-        .doge-2 {
-          display: block;
-        }
-      }
-    }
-
-    .social-media {
-      ${flexPos('center')}
-      flex-direction: column;
-      > img:not(:first-child) {
-        margin-top: 20rem;
-      }
-    }
-
-    .buy-now {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0);
-      padding: 0 60rem;
-      z-index: 99;
-      ${$height('46rem', '50rem', '50rem')}
-      ${$bottom('-70rem', '-130rem', '-130rem')}
-      white-space: nowrap;
-      transition: transform 0.5s;
-
-      &:hover {
-        transform: translate(-50%, 0) rotateZ(-5deg) scale(1.1);
-      }
-
-      @media (min-width: ${phoneSize}) {
-        transition: all 0.5s;
-      }
+    .bg-star {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  .slogan {
-    color: #ffffffce;
-    font-weight: 700;
-    ${$fontSize('42rem', '132rem', '132rem')}
-    text-align: center;
-    line-height: 1;
-    white-space: nowrap;
+  .banner-container {
+    width: 1440rem;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    ${flexPos('flex-start')}
 
-    @media (min-width: ${phoneSize}) {
-      line-height: 0.8;
+    .buy-btn {
+      margin-top: 40rem;
+      height: 50rem;
+      border-radius: 10rem;
+      padding: 0 65rem;
+      background-color: #fff;
+      font-size: 16rem;
     }
 
-    @media (min-width: ${phoneSize}) and (max-width: 1300px) {
-      font-size: 10vw !important;
+    .tokenomics {
+      font-size: 24rem;
+      color: #fff;
+      margin-top: 166rem;
+      position: relative;
+      width: fit-content;
+      padding-bottom: 10rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+        background-color: #fff;
+      }
     }
   }
 `;
 
 const Banner = () => {
   return (
-    <BannerWrap className="bg-yellow">
-      <div className="banner-container">
-        <main className="banner-main">
-          {/* <div className="flex justify-center items-center flex-col Gilroy-Bold w-20">
-            <div>T</div>
-            <div>O</div>
-            <div>K</div>
-            <div>E</div>
-            <div>N</div>
-            <div>O</div>
-            <div>M</div>
-            <div>I</div>
-            <div>C</div>
-            <div>S</div>
-          </div> */}
-
-          <div
-            className="tokenomics-text cursor-pointer"
-            onClick={() => {
-              slideIntoView(document.getElementById('Tokenomics'), window, 104);
-            }}
-          >
-            <img
-              src={require('@img/home/tokenomics-text.png')}
-              alt=""
-              className="w-20 md:w-31 text-1"
-            />
-            <img
-              src={require('@img/home/tokenomics-text-ite.png')}
-              alt=""
-              className="w-20 md:w-31 text-2"
-            />
-          </div>
-
-          <div className="doge-wrap w-250 h-250 md:w-558 md:h-558">
-            <img src={'/logo-doge.png'} alt="" className="doge-1 w-250 h-250 md:w-558 md:h-558" />
-            <img
-              src={require('@img/common/doge-down.png')}
-              alt=""
-              className="doge-2 w-250 h-250 md:w-558 md:h-558"
-            />
-          </div>
-
-          <div className="social-media">
-            {/* <img src={require('@img/common/icon-discord.svg')} alt="" className="w-20 md:w-26" /> */}
-            <img src={require('@img/common/icon-x.svg')} alt="" className="w-20 md:w-26" />
-            <img src={require('@img/common/icon-tg.svg')} alt="" className="w-20 md:w-26" />
-            {/* <img src={require('@img/common/icon-tiktok.svg')} alt="" className="w-20 md:w-26" /> */}
-            {/* <img src={require('@img/common/icon-ins.svg')} alt="" className="w-20 md:w-26" /> */}
-          </div>
-        </main>
-
-        <Button className="buy-now Poppins-Bold">BUY NOW</Button>
+    <BannerWrap>
+      <div className="bg-star-wrap">
+        <VideoComp src={require('@/assets/video/bg-star.mp4')} className="bg-star" />
       </div>
 
-      <div className="slogan Poppins-ExtraBold">
-        <div>Savior of the</div>
-        <div>Persecuted Puppy</div>
-      </div>
+      <main className="banner-container">
+        <div className="relative z-2">
+          <div className="text-136 text-yellow font-bold ChildWriting-Regular">DOGELINK</div>
+          <div className="text-42 ChildWriting-Regular font-bold">
+            Savior of the Persecuted Puppy
+          </div>
+          <button className="buy-btn Poppins-SemiBold">BUY NOW</button>
 
-      <Marquee>
-        Supreme Adorable Overlord of the Woof Realm • Butt-Sniffing Enthusiast • Conqueror of
-        Alternate Realms • Bone-Crushing Battle Commander • Sofa Cushion Destroyer • Lamenting Table
-        Leg Artist • Ascendant Leader of the Canine World • Venerable and Mighty Grand Marshal •
-      </Marquee>
+          <a className="tokenomics text-24 underline-white Poppins-Medium">TOKENOMICS</a>
+        </div>
+
+        <img
+          className="w-846 ml-100 absolute right-0 bottom-0 z-2"
+          src={require('@img/home/banner/banner-doge.png')}
+          alt=""
+        />
+
+        <div className="absolute right-105 bottom-160 z-3 flex-center">
+          <img src={require('@img/common/icon-tg.svg')} alt="" className="w-30" />
+          <img src={require('@img/common/icon-x.svg')} alt="" className="w-30 ml-24" />
+        </div>
+      </main>
     </BannerWrap>
   );
 };

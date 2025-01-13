@@ -1,4 +1,8 @@
 @font-face {
+  font-family: ChildWriting-Regular;
+  src: url('./ChildWriting-Regular.ttf');
+}
+@font-face {
   font-family: Poppins-Black;
   src: url('./Poppins-Black.ttf');
 }
@@ -114,4 +118,7 @@
 }
 .Poppins-ThinItalic {
   font-family: Poppins-ThinItalic;
+}
+.ChildWriting-Regular {
+  font-family: ChildWriting-Regular;
 }

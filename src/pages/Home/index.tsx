@@ -16,13 +16,13 @@ const Home = () => {
 
       <Banner />
 
-      <Slides />
+      {/* <Slides /> */}
 
-      <ToTheMoon />
+      {/* <ToTheMoon /> */}
 
-      <Tokenomics />
+      {/* <Tokenomics /> */}
 
-      <Doomsday />
+      {/* <Doomsday /> */}
     </HomeWrap>
   );
 };

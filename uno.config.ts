@@ -14,7 +14,7 @@ export default defineConfig({
       phone: '393px',
       lg: '1024px',
       xl: '1280px',
-      pc: '1440px',
+      pc: '1436px',
       plus: '1920px',
     },
 
@@ -69,6 +69,7 @@ export default defineConfig({
 
     ['flex-center', { display: 'flex', 'justify-content': 'center', 'align-items': 'center' }],
     ['disable', { filter: 'grayscale(98%)', opacity: '0.25' }],
+    ['uppercase', { 'text-transform': 'uppercase' }],
     [/^font-([\.\d]+)$/, ([_, num]) => ({ 'font-weight': `${num}` })],
     [/^flex-([\.\d]+)$/, ([_, num]) => ({ flex: `0 0 ${num}rem` })],
   ],
