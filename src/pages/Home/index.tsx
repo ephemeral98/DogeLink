@@ -5,17 +5,17 @@ import Slides from './components/Slides';
 import ToTheMoon from './components/ToTheMoon';
 import Tokenomics from './components/Tokenomics';
 import Doomsday from './components/Doomsday';
-// import ToTop from '@/components/ToTop';
 import Gallery from './components/Gallery';
 import BeHold from './components/BeHold';
+import useAppStore from '@/store/appStore';
 
 const HomeWrap = styled.div``;
 
 const Home = () => {
+  const appStore = useAppStore();
+
   return (
     <HomeWrap>
-      {/* <ToTop /> */}
-
       <Banner />
 
       <Gallery />

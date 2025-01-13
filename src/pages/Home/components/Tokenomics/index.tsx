@@ -67,7 +67,7 @@ const Tokenomics = () => {
 
   return (
     <TokenomicsWrap id="Tokenomics">
-      <HomeTitle>Tokenomics</HomeTitle>
+      <HomeTitle>DOGENOMICS</HomeTitle>
 
       <main className="flex-center mt-24 md:mt-70 flex-col lg:flex-row">
         <section className="token-supply mr-0 md:mr-26 z-9">
@@ -107,7 +107,12 @@ const Tokenomics = () => {
             />
           </div>
 
-          <a className="view-into-solana">
+          <a
+            className="view-into-solana"
+            onClick={() => {
+              window.open('https://solscan.io/token/6oZYqMfGpk6xANmXqsTVGVMtC8eP9vExiwseE3ZBpump');
+            }}
+          >
             <span className="underline Poppins-Medium text-yellow">VIEW IN SOLANA</span>
             <img src={require('@img/common/icon-arrow-bar.svg')} alt="" className="w-22 ml-10" />
           </a>

@@ -28,8 +28,7 @@ const Topbar = () => {
 
       <button
         onClick={() => {
-          console.log('111');
-          slideIntoView('');
+          slideIntoView(document.getElementById('gallery'), window, 104);
         }}
         className="uppercase h-30 md:h-48 px-15 md:px-24 bg-yellow rounded-100 text-12 md:text-16"
       >

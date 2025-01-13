@@ -76,6 +76,15 @@ const BannerWrap = styled.div`
       ${$paddingX('37rem', '65rem', '65rem')}
       ${$marginTop('27rem', '40rem', '40rem')}
       ${$borderRadius('6rem', '10rem', '10rem')}
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: rotateZ(-5deg) scale(1.1);
+      }
+
+      @media (min-width: ${phoneSize}) {
+        transition: all 0.5s;
+      }
 
       @media (max-width: ${phoneSize}) {
         margin: 27rem auto;
@@ -145,8 +154,22 @@ const Banner = () => {
 
             {appStore.curDevice === 'phone' && (
               <div className="links">
-                <img src={require('@img/common/icon-tg.svg')} alt="" className="w-30" />
-                <img src={require('@img/common/icon-x.svg')} alt="" className="w-30 ml-24" />
+                <img
+                  onClick={() => {
+                    window.open('https://t.me/DogeLinkSOL');
+                  }}
+                  src={require('@img/common/icon-tg.svg')}
+                  alt=""
+                  className="w-30 cursor-pointer"
+                />
+                <img
+                  onClick={() => {
+                    window.open('https://x.com/DogerLinkSOL');
+                  }}
+                  src={require('@img/common/icon-x.svg')}
+                  alt=""
+                  className="w-30 cursor-pointer ml-24"
+                />
               </div>
             )}
           </div>

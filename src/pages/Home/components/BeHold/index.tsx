@@ -13,6 +13,7 @@ import HomeTitle from '@/components/HomeTitle';
 import VideoComp from '@/components/VideoComp';
 import useAppStore from '@/store/appStore';
 import { buyNowLink } from '@/utils';
+import ToTop from '@/components/ToTop';
 
 const BeHoldWrap = styled.div`
   padding-top: 184rem;
@@ -96,6 +97,8 @@ const BeHold = () => {
           />
         </section>
       </main>
+
+      {appStore.curDevice === 'phone' && <ToTop />}
     </BeHoldWrap>
   );
 };
