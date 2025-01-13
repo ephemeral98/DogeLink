@@ -4,18 +4,18 @@ import HomeTitle from '@/components/HomeTitle';
 import { $paddingX, $width, phoneSize } from '@/styled/mediaSize';
 
 const TokenomicsWrap = styled.div`
-  background-image: url(${require('@img/home/bg-tokenomics.png')});
   background-size: cover;
   padding: 83rem 0 120rem;
   position: relative;
   ${$paddingX('30rem', '0', '0')}
 
   .token-supply {
-    ${$width('333rem', '447rem', '447rem')}
-    padding: 50rem 30rem 30rem;
+    ${$width('333rem', '613rem', '613rem')}
+    padding: 80rem 50rem 80rem;
     border-radius: 20rem;
-    background-color: #000;
     color: #fff;
+    background-image: url(${require('@img/home/bg-round.png')});
+    background-size: 100% 100%;
   }
 
   .addr {
@@ -63,29 +63,6 @@ const Tokenomics = () => {
     <TokenomicsWrap id="Tokenomics">
       <HomeTitle>Tokenomics</HomeTitle>
 
-      <img
-        src={require('@img/home/img-bear.png')}
-        alt=""
-        className="w-187 md:w-386 absolute left-0 bottom-0"
-      />
-      <div className="talker">
-        <img
-          src={require('@img/home/img-fox.png')}
-          alt=""
-          className="w-148 md:w-361 absolute left-0 bottom-0"
-        />
-        <img
-          src={require('@img/home/fox-talk.png')}
-          alt=""
-          className="w-214 md:w-458 absolute left-[-160rem] bottom-[-50rem] md:left-[-330rem] md:bottom-[-90rem]"
-        />
-      </div>
-      <img
-        src={require('@img/home/img-elon.png')}
-        alt=""
-        className="w-256 md:w-386 absolute right-0 bottom-0"
-      />
-
       <main className="flex-center mt-70 flex-col md:flex-row">
         <section className="token-supply mr-0 md:mr-26 z-9">
           <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
@@ -103,9 +80,8 @@ const Tokenomics = () => {
         </section>
 
         <section className="mt-26 md:mt-0">
-          <div className="text-center md:text-left text-18 md:text-21 font-600 Poppins-Bold">
-            <div>As friends, you awesome humans</div>
-            <div>need to grab my tokens.</div>
+          <div className="text-center md:text-left text-21 md:text-21 font-600 ChildWriting-Regular">
+            <div>As friends, you awesome humans need to grab my tokens.</div>
           </div>
 
           <div className="addr flex-center h-39 md:h-48 px-20 mt-20 relative z-99">

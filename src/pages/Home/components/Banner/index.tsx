@@ -76,7 +76,7 @@ const Banner = () => {
           </div>
           <button className="buy-btn Poppins-SemiBold">BUY NOW</button>
 
-          <a className="tokenomics text-24 underline-white Poppins-Medium">TOKENOMICS</a>
+          <a className="tokenomics Poppins-Medium">TOKENOMICS</a>
         </div>
 
         <img

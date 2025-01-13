@@ -6,6 +6,7 @@ import ToTheMoon from './components/ToTheMoon';
 import Tokenomics from './components/Tokenomics';
 import Doomsday from './components/Doomsday';
 import ToTop from '@/components/ToTop';
+import Gallery from './components/Gallery';
 
 const HomeWrap = styled.div``;
 
@@ -16,11 +17,15 @@ const Home = () => {
 
       <Banner />
 
+      <Gallery />
+
+      <img src={require('@img/home/doge-eat.jpg')} alt="" className="w-full mt-60" />
+
       {/* <Slides /> */}
 
       {/* <ToTheMoon /> */}
 
-      {/* <Tokenomics /> */}
+      <Tokenomics />
 
       {/* <Doomsday /> */}
     </HomeWrap>
