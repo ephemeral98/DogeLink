@@ -57,7 +57,7 @@ const TokenomicsWrap = styled.div`
 `;
 
 const Tokenomics = () => {
-  const [addr, setAddr] = useState('EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm');
+  const [addr, setAddr] = useState('6oZYqMfGpk6xANmXqsTVGVMtC8eP9vExiwseE3ZBpump');
 
   return (
     <TokenomicsWrap id="Tokenomics">
@@ -67,7 +67,7 @@ const Tokenomics = () => {
         <section className="token-supply mr-0 md:mr-26 z-9">
           <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
           <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">
-            100,000,000,000,000
+            1,000,000,000
           </div>
           <button className="mx-auto mt-42 bg-yellow h-50 px-65 rounded-10rem text-16 font-700 Poppins-Bold buy-now">
             BUY NOW
@@ -85,13 +85,13 @@ const Tokenomics = () => {
           </div>
 
           <div className="addr flex-center h-39 md:h-48 px-20 mt-20 relative z-99">
-            {/* <div className="ParrickHandSC mr-10 text-10 md:text-21 font-400">{addr}</div>
+            <div className="ParrickHandSC mr-10 text-10 md:text-21 font-400">{addr}</div>
             <img
               data-clipboard-text={addr}
               src={require('@img/common/icon-copy.svg')}
               alt=""
               className="w-13 md:w-22 copy-btn"
-            /> */}
+            />
           </div>
 
           <a className="view-into-solana">
