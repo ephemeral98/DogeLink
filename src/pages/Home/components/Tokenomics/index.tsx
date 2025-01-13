@@ -10,12 +10,17 @@ const TokenomicsWrap = styled.div`
   ${$paddingX('30rem', '0', '0')}
 
   .token-supply {
-    ${$width('333rem', '613rem', '613rem')}
+    ${$width('362rem', '613rem', '613rem')}
     padding: 80rem 50rem 80rem;
     border-radius: 20rem;
     color: #fff;
     background-image: url(${require('@img/home/bg-round.png')});
     background-size: 100% 100%;
+
+    @media (max-width: ${phoneSize}) {
+      background-image: url(${require('@img/home/mob-bg-round.png')});
+      padding: 45rem 50rem 45rem;
+    }
   }
 
   .addr {
@@ -63,7 +68,7 @@ const Tokenomics = () => {
     <TokenomicsWrap id="Tokenomics">
       <HomeTitle>Tokenomics</HomeTitle>
 
-      <main className="flex-center mt-70 flex-col md:flex-row">
+      <main className="flex-center mt-24 md:mt-70 flex-col md:flex-row">
         <section className="token-supply mr-0 md:mr-26 z-9">
           <div className="text-18 md:text-24 font-500 text-center Poppins-Bold">Token Supply</div>
           <div className="mt-2 text-24 md:text-36 font-500 text-center Poppins-SemiBold">

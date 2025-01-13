@@ -2,27 +2,44 @@ import React, { Suspense } from 'react';
 import { styled } from 'styled-components';
 import HomeTitle from '@/components/HomeTitle';
 import useAppStore from '@/store/appStore';
-import { $paddingX, $paddingY, phoneSize } from '@/styled/mediaSize';
+import {
+  $fontSize,
+  $marginTop,
+  $paddingBottom,
+  $paddingX,
+  $paddingY,
+  phoneSize,
+} from '@/styled/mediaSize';
 
 const GalleryWrap = styled.div`
-  margin-top: 118rem;
+  ${$marginTop('70rem', '118rem', '118rem')}
 
   .gallery-list {
-    margin-top: 60rem;
+    ${$marginTop('25rem', '60rem', '60rem')}
     display: grid;
     place-content: center;
     place-items: center;
     grid-gap: 23rem;
     grid-template-columns: repeat(3, auto);
+
+    @media (max-width: ${phoneSize}) {
+      padding: 0 30rem;
+      grid-template-columns: repeat(1, auto);
+    }
   }
 
   .see-more {
-    font-size: 24rem;
+    margin: 60rem auto 0;
+
+    @media (max-width: ${phoneSize}) {
+      margin: 24rem auto 0;
+    }
+
+    ${$fontSize('18rem', '24rem', '24rem')}
     color: #fff;
     position: relative;
     width: fit-content;
-    padding-bottom: 10rem;
-    margin: 60rem auto 0;
+    ${$paddingBottom('5rem', '10rem', '10rem')}
 
     &::after {
       content: '';
@@ -42,27 +59,27 @@ const Gallery = () => {
   const [galleries, setGalleries] = useState([
     {
       id: 0,
-      img: require('@img/slides/slides-1.png'),
+      img: require('@img/home/gallery/gallery-1.png'),
     },
     {
       id: 1,
-      img: require('@img/slides/slides-2.png'),
+      img: require('@img/home/gallery/gallery-2.png'),
     },
     {
       id: 2,
-      img: require('@img/slides/slides-3.png'),
+      img: require('@img/home/gallery/gallery-3.png'),
     },
     {
       id: 3,
-      img: require('@img/slides/slides-1.png'),
+      img: require('@img/home/gallery/gallery-4.png'),
     },
     {
       id: 4,
-      img: require('@img/slides/slides-2.png'),
+      img: require('@img/home/gallery/gallery-5.png'),
     },
     {
       id: 5,
-      img: require('@img/slides/slides-3.png'),
+      img: require('@img/home/gallery/gallery-6.png'),
     },
   ]);
 
@@ -73,7 +90,7 @@ const Gallery = () => {
       <main className="gallery-list">
         {galleries.map((item) => (
           <div key={item.id}>
-            <img src={item.img} alt="" className="w-404" />
+            <img src={item.img} alt="" className="w-full md:w-404" />
           </div>
         ))}
       </main>

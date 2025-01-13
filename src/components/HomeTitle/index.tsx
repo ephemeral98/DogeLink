@@ -17,9 +17,9 @@ const HomeTitleWrap = styled.div`
   }
 `;
 
-const HomeTitle: FC<{ children: ReactNode }> = (props) => {
+const HomeTitle: FC<{ children: ReactNode; className?: string }> = (props) => {
   return (
-    <HomeTitleWrap>
+    <HomeTitleWrap className={props.className}>
       <div className="title-content ChildWriting-Regular">{props.children}</div>
     </HomeTitleWrap>
   );

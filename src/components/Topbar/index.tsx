@@ -22,11 +22,11 @@ const Topbar = () => {
   return (
     <TopbarWrap>
       <div className="flex-center">
-        <img src={'/logo-doge.png'} alt="" className="w-42 md:w-81" />
-        <div className="ml-10 text-14 md:text-24 font-800 Poppins-ExtraBold">DOGELINK</div>
+        <img src={'/logo-doge.png'} alt="" className="w-38 md:w-57" />
+        <div className="ml-10 text-24 font-800 Poppins-Bold">DOGELINK</div>
       </div>
 
-      <button className="uppercase h-48 px-24 bg-yellow rounded-100 text-16">
+      <button className="uppercase h-30 md:h-48 px-15 md:px-24 bg-yellow rounded-100 text-12 md:text-16">
         Community Gallery
       </button>
     </TopbarWrap>
