@@ -3,6 +3,7 @@ import React from 'react';
 import { styled } from 'styled-components';
 import VideoComp from '@/components/VideoComp';
 import useAppStore from '@/store/appStore';
+import slideIntoView from '@/utils/slideIntoView';
 
 import {
   $borderRadius,
@@ -150,7 +151,14 @@ const Banner = () => {
           )}
 
           <div className="px-30 md:px-0 mt-20 md:mt-166 flex justify-between items-center">
-            <a className="tokenomics Poppins-Medium">TOKENOMICS</a>
+            <a
+              className="tokenomics Poppins-Medium"
+              onClick={() => {
+                slideIntoView(document.getElementById('Tokenomics'), window, 104);
+              }}
+            >
+              TOKENOMICS
+            </a>
 
             {appStore.curDevice === 'phone' && (
               <div className="links">
