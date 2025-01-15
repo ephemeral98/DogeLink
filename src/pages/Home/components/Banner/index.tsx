@@ -190,23 +190,6 @@ const Banner = () => {
             alt=""
           />
         )}
-
-        {appStore.curDevice !== 'phone' && (
-          <div className="links">
-            <img
-              onClick={() => window.open('https://t.me/DogeLinkSOL')}
-              src={require('@img/common/icon-tg.svg')}
-              alt=""
-              className="w-30 cursor-pointer"
-            />
-            <img
-              onClick={() => window.open('https://x.com/DogerIsBack')}
-              src={require('@img/common/icon-x.svg')}
-              alt=""
-              className="w-30 ml-24 cursor-pointer"
-            />
-          </div>
-        )}
       </main>
     </BannerWrap>
   );
