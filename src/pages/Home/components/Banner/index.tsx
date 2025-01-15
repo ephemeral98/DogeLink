@@ -118,8 +118,8 @@ const BannerWrap = styled.div`
 
     @media (min-width: ${phoneSize}) {
       position: absolute;
-      right: 105rem;
-      bottom: 160rem;
+      left: 0;
+      bottom: 0;
       z-index: 3;
     }
   }
@@ -172,7 +172,7 @@ const Banner = () => {
                 />
                 <img
                   onClick={() => {
-                    window.open('https://x.com/DogerLinkSOL');
+                    window.open('https://x.com/DogerIsBack');
                   }}
                   src={require('@img/common/icon-x.svg')}
                   alt=""
@@ -193,8 +193,18 @@ const Banner = () => {
 
         {appStore.curDevice !== 'phone' && (
           <div className="links">
-            <img src={require('@img/common/icon-tg.svg')} alt="" className="w-30" />
-            <img src={require('@img/common/icon-x.svg')} alt="" className="w-30 ml-24" />
+            <img
+              onClick={() => window.open('https://t.me/DogeLinkSOL')}
+              src={require('@img/common/icon-tg.svg')}
+              alt=""
+              className="w-30 cursor-pointer"
+            />
+            <img
+              onClick={() => window.open('https://x.com/DogerIsBack')}
+              src={require('@img/common/icon-x.svg')}
+              alt=""
+              className="w-30 ml-24 cursor-pointer"
+            />
           </div>
         )}
       </main>
