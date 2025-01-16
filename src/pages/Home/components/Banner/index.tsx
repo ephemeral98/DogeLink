@@ -163,12 +163,19 @@ const Banner = () => {
             {appStore.curDevice === 'phone' && (
               <div className="links">
                 <img
+                  onClick={() => window.open('https://www.coingecko.com/en/coins/dogelink')}
+                  src={require('@img/common/logo-coingecko.png')}
+                  alt=""
+                  className="w-30 cursor-pointer"
+                />
+
+                <img
                   onClick={() => {
                     window.open('https://t.me/DogeLinkSOL');
                   }}
                   src={require('@img/common/icon-tg.svg')}
                   alt=""
-                  className="w-30 cursor-pointer"
+                  className="w-30 cursor-pointer ml-24"
                 />
                 <img
                   onClick={() => {
